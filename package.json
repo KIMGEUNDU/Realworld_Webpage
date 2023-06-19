@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "run-p w live",
+    "sass": "sass scss:css",
+    "c": "npm run sass -- --style=compressed",
+    "w": "npm run sass -- --watch",
+    "no": "npm run sass -- --no-source-map",
+    "live": "live-server --port=0528",
+    "clear": "rimraf css"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.1",
+    "sass": "^1.63.4"
+  }
+}

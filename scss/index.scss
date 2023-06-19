@@ -1,0 +1,20 @@
+@use "./base" as *;
+@use "./layout" as *;
+@use "./themes" as *;
+
+.realworldHeader {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  background: $nav-color;
+}
+
+.rwMenu_list_wrapper {
+  @include ul_reset;
+  @include flex_default;
+}
+
+.rwMenu_link {
+  @include a_reset;
+}

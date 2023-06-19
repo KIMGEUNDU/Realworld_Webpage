@@ -1,0 +1,14 @@
+@mixin ul_reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+@mixin a_reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin flex_default($fl: row, $fw: nowrap) {
+  display: flex;
+  flex-flow: $fl $fw;
+}
