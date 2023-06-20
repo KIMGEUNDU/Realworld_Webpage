@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.realworldHeader{
+  background: $nav-bgcolor;
+  color: $nav-color;
+  width: 100%;
+  height: fit-content;
+  padding: rem(8px) rem(16px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  &_wrapper{
+    @include autoMargin;
+    @include flexbox($jc:space-between);
+  }
+
+  .rwLogo{
+    width: 162px;
+    height: 35px;
+  }
+}
+
+.rwMenu{
+  &_list_wrapper{
+    @include flexbox;
+  }
+
+  &_list_item{
+    font-weight: 600;
+    font-size: rem(13px);
+    margin: 0 rem(5px);
+    
+  }
+  
+  &_link{
+    display:block;
+    width: 100%;
+    height: 100%;
+    padding: rem(10px) rem(8px);
+
+    &:hover{
+      background: $nav-hover-bgcolor;
+      color: $nav-hover-color;
+      border-radius: rem(5px);
+    }
+  }
+}
