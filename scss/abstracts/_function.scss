@@ -1,0 +1,20 @@
+// Sass의 내장 함수를 사용할거야
+@use "sass:math";
+
+// 루트 요소 기본 단위 --------------------------------------------------------------- /
+$rootUnit: 16px !default;
+
+// 단위 제거 함수 ------------------------------------------------------------------ /
+@function removeUnit($value) {
+  // @return ($value / ($value * 0 + 1));
+  //@return math.div($value, $value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
+  // 곱하기 일때는 단위가 같으면 결과물은 단위가 탈락한 채로 return 된다.
+}
+
+// px을 rem 단위로 변경하는 함수 ------------------------------------------------------- /
+@function rem($value, $base: $rootUnit) {
+  $removeValue: removeUnit($value);
+  $removeBase: removeUnit($base);
+  @return math.div($removeValue, $removeBase) * 1rem;
+}
