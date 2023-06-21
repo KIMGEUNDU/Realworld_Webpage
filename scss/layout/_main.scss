@@ -1,5 +1,6 @@
 @use "./../abstracts" as *;
 
+
 .realworldMain{
   width: 100%;
   height: auto;
@@ -30,20 +31,13 @@
 .rwMobile_wrapper{
   @include mainSection;
   position:relative;
-
+  
   &::before{
     content: "";
-    background-image: url(https://realworld.to/static/3bb4fa0c102dd7b0fa91951d1477711b/024c9/logo_color_white_horizontal.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 1100px 0;
-    opacity: 0.5;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: -1;
+    @include opacityBg{
+      background-image: url(https://realworld.to/static/3bb4fa0c102dd7b0fa91951d1477711b/024c9/logo_color_white_horizontal.webp);
+      background-position: 1100px 0;
+    };
   }
 
   .rwMoblie{
@@ -78,12 +72,91 @@
 
 .rwTheme_wrapper{
   width: 100%;
+  height: auto;
+  position: relative;
+  background-color: $bg-color2;
 
   .rwTheme{
-    @include flexbox;
+    padding-top: 100px;
 
+    &_promotion{
+      @include autoMargin;
+      font-size: rem(32px);
+      margin-bottom: 20px;
+    }
+    
     &_list_wrapper{
-      width: 450px;
+      @include flexbox;
+      @include afterAnimation;
+    }
+
+    &_btn{
+      text-align: center;
+      padding: 100px 0;
+
+      &_link{
+        @include bfbtnHover;
+        border-radius: 40px;
+        border: 1px solid $primary-color;
+        padding: 15px 40px;
+
+        &:hover{
+          @include btnHover;
+        }
+
+        &_Btn{
+          background: transparent;
+          max-width: 100%;
+          border: 0;
+          color: inherit;
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+    .rwTheme_list{
+      min-width: 420px;
+      height: auto;
+      margin-right: 20px;
+      overflow: hidden;
+      @include flexbox($fd: column);
+      gap: 10px;
+
+      &_title{
+        font-size: rem(24px);
+        font-weight: 600;
+
+        .rwTheme_list_link:hover{
+          color: $hover-color;
+        }
+      }
+
+      &_img_wrapper{
+        width: 100%;
+        order: -1;
+
+        .rwTheme_list_img{
+          border-radius: 10px;
+        }
+      }
+
+      &_summary{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: $section-light;
+      }
+
+      &_locationstar{
+        @include flexbox($jc: space-between);
+        order: -1;
+
+        .rwTheme_list_location{
+          color: $section-light;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,24 @@
+@use "./themes" as *;
+
+@keyframes moveTheme{
+  20%{
+    transition: transform;
+    transform: translateX(-35%);
+  }
+  
+  65%{
+    transform: translateX(-85%);
+  }
+
+  85%{
+    transform: translateX(-35%);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}
+
 @mixin flexbox( $fd:row, $fw: nowrap, $jc:flex-start, $ac:flex-start){
   display: flex;
   flex-flow : $fd $fw;
@@ -14,4 +35,38 @@
 @mixin mainSection{
   width: 100%;
   height: 730px;
+}
+
+@mixin afterAnimation{
+  animation-name: moveTheme;
+  animation-duration: 30s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+@mixin opacityBg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  @content;
+}
+
+@mixin btnHover{
+  transition: background-color, color;
+  transition-duration: 0.8s, 0.5s;
+  background-color: $primary-color;
+  color: $bg-color1;
+}
+
+@mixin bfbtnHover{
+  transition: background-color, color;
+  transition-duration: 0.5s, 0.8s;
+  background-color: rgba(255,255,255,0.5);
+  color: $footer-color;
 }
