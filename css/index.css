@@ -461,7 +461,7 @@ iframe {
   content: "";
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.1;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -589,6 +589,38 @@ iframe {
 }
 .rwTheme_wrapper .rwTheme .rwTheme_list_locationstar .rwTheme_list_location {
   color: rgb(98, 98, 98);
+}
+
+.rwintro_wrapper {
+  width: 100%;
+  height: 730px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OTAuMTU1IiBoZWlnaHQ9IjY1Mi42MjEiIHZpZXdCb3g9IjAgMCA2OTAuMTU1IDY1Mi42MjEiPg0KICAgIDxnIGlkPSJwcmVmaXhfX2JhY2tncm91bmQtZ3JhcGhpYy0yIiBvcGFjaXR5PSIwLjEiIHRyYW5zZm9ybT0icm90YXRlKDE3MSAzODAuMzM5IDQwMS45MDIpIj4NCiAgICAgICAgPGcgaWQ9InByZWZpeF9f6re466O5XzQ4NCIgZGF0YS1uYW1lPSLqt7jro7kgNDg0IiBvcGFjaXR5PSIwLjc3OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjg2LjM2OSAyMTQuNjUyKSI+DQogICAgICAgICAgICA8cGF0aCBpZD0icHJlZml4X1/tjKjsiqRfMzIyIiBmaWxsPSIjYzg2OWZmIiBkPSJNOS40NjcgMzM5LjM1MWE2Ni40NjUgNjYuNDY1IDAgMCAxIDEuNjI1LTcwLjk1MUwxNjkuNTQ3IDI5LjcxM2E2Ni40NjUgNjYuNDY1IDAgMCAxIDExMC43NDggNzMuNTE5bC04MC41NSAxMjEuMzM2IDE0My45MTUtMTQuODczYTY2LjQ2NSA2Ni40NjUgMCAwIDEgNjIuODMxIDEwMS45MTRsLTE1MS41MjIgMjM3YTY2LjQ2NCA2Ni40NjQgMCAwIDEtMTEyLTcxLjZsNzcuMzEtMTIwLjkyMkw3My4zIDM3MS4yNzNhNjYuNDYxIDY2LjQ2MSAwIDAgMS02My43MS0zMS43MjF6IiBkYXRhLW5hbWU9Iu2MqOyKpCAzMjIiLz4NCiAgICAgICAgPC9nPg0KICAgICAgICA8ZyBpZD0icHJlZml4X1/qt7jro7lfNDg1IiBkYXRhLW5hbWU9Iuq3uOujuSA0ODUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwNS45NzYgMTUzLjY3MSkiPg0KICAgICAgICAgICAgPHBhdGggaWQ9InByZWZpeF9f7Yyo7IqkXzMyMyIgZmlsbD0iI2ZmZDgxNCIgZD0iTTIxLjAxOCAxNy45NjZhNjYuNDY2IDY2LjQ2NiAwIDAgMSA5My45NDUgMy4wNTFsMTc2Ljg3MSAxODguNzQ1YTY2LjQ2NCA2Ni40NjQgMCAwIDEtOTcgOTAuODk0TDE3Ljk2NyAxMTEuOTExYTY2LjQ2NCA2Ni40NjQgMCAwIDEgMy4wNTEtOTMuOTQ1eiIgZGF0YS1uYW1lPSLtjKjsiqQgMzIzIi8+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4NCg==);
+  background-repeat: no-repeat;
+  background-position: 1400px -250px;
+}
+.rwintro_wrapper .rwintro_box {
+  padding: 100px 0;
+}
+.rwintro_wrapper .rwintro {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.rwintro_wrapper .rwintro_title {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
+}
+.rwintro_wrapper .rwintro_image_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  column-gap: 35px;
+  text-align: center;
+  font-size: 1.1875rem;
+}
+.rwintro_wrapper .rwintro_image_wrapper .rwintro_image_caption {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */
