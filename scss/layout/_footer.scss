@@ -1,0 +1,79 @@
+@use "./../abstracts" as *;
+
+// 리얼월드 푸터 영역
+.rwFooter_wrapper{
+  background: $footer-color;
+  color: $bg-color1;
+  padding: 60px 0;
+  .rwFooter{
+    @include autoMargin;
+    @include flexbox{
+    column-gap: 50px;
+    };
+    height: 180px;
+  }
+  // 회사 소개
+  .rwCompany{
+    &_name{
+      @include footerTitle;
+      line-height: 2;
+    }
+    
+    &_address{
+      font-size: rem(13px);
+      font-weight: 500;
+    }
+  }
+
+  //콘택트
+  .rwContact{
+    width: 200px;
+
+    &_title{
+      @include footerTitle;
+    }
+
+    &_link_wrapper{
+      @include flexbox($jc:space-between);
+      margin-bottom: 10px;
+    }
+
+    &_Btn{
+      @include btnBlock;
+      @include bffooterbtnHover;
+      font-weight: 600;
+      color: $bg-color1;
+      background: $primary-color;
+
+        &:hover{
+          @include footerbtnHover;
+          background: $hover-color;
+        }
+      }
+    }
+  
+
+  //비즈니스
+  .rwBusiness{
+    width: 200px;
+    &_title{
+      @include footerTitle;
+    }
+
+    &_Btn{
+      @include btnBlock;
+      @include bffooterbtnHover;
+      color: $bg-color1;
+      font-weight: 600;
+      border: 1px solid $bg-color1;
+
+        &:hover{
+          @include footerbtnHover;
+          color:black;
+          background: $bg-color1;
+        }
+      }
+    }
+  }
+
+

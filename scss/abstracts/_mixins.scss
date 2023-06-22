@@ -59,7 +59,7 @@
 
 @mixin btnHover{
   transition: background-color, color;
-  transition-duration: 0.8s, 0.5s;
+  transition-duration: 0.3s, 0.2s;
   background-color: $primary-color;
   color: $bg-color1;
 }
@@ -69,4 +69,29 @@
   transition-duration: 0.5s, 0.8s;
   background-color: rgba(255,255,255,0.5);
   color: $footer-color;
+}
+
+@mixin footerTitle{
+  font-size: rem(30px);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@mixin btnBlock{
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+@mixin footerbtnHover{
+  transition: background-color, color;
+  transition-duration: 0.8s, 0.5s;
+}
+
+@mixin bffooterbtnHover{
+  transition: background-color, color;
+  transition-duration: 0.5s, 0.8s;
 }
