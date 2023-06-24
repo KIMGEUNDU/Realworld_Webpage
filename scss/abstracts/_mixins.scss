@@ -1,21 +1,35 @@
 @use "./themes" as *;
 
 @keyframes moveTheme{
-  20%{
-    transition: transform;
-    transform: translateX(-35%);
+  15%{
+    transition: transform,1s;
+    transform: translateX(-25%);
   }
   
-  65%{
+  30%{
+  transform: translateX(-55%);
+  }
+
+  42%{
+    transform: translateX(-80%);
+  }
+
+  58%{
     transform: translateX(-85%);
+  }
+  69%{
+    transform: translateX(-80%);
+  }
+  
+  78%{
+    transform: translateX(-55%);
   }
 
   85%{
-    transform: translateX(-35%);
+    transform: translateX(-25%);
   }
-
   100%{
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 
@@ -39,9 +53,10 @@
 
 @mixin afterAnimation{
   animation-name: moveTheme;
-  animation-duration: 30s;
-  animation-fill-mode: backwards;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-out 0s;
+  animation-delay: 1.5s;
 }
 
 @mixin opacityBg{

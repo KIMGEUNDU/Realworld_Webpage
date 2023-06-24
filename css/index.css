@@ -339,6 +339,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-style: 13px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 /* 유연한 미디어 */
@@ -366,18 +367,30 @@ iframe {
 }
 
 @keyframes moveTheme {
-  20% {
-    transition: transform;
-    transform: translateX(-35%);
+  15% {
+    transition: transform, 1s;
+    transform: translateX(-25%);
   }
-  65% {
+  30% {
+    transform: translateX(-55%);
+  }
+  42% {
+    transform: translateX(-80%);
+  }
+  58% {
     transform: translateX(-85%);
   }
+  69% {
+    transform: translateX(-80%);
+  }
+  78% {
+    transform: translateX(-55%);
+  }
   85% {
-    transform: translateX(-35%);
+    transform: translateX(-25%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 .realworldHeader {
@@ -520,9 +533,10 @@ iframe {
   justify-content: flex-start;
   align-content: flex-start;
   animation-name: moveTheme;
-  animation-duration: 30s;
-  animation-fill-mode: backwards;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-out 0s;
+  animation-delay: 1.5s;
 }
 .rwTheme_wrapper .rwTheme_btn {
   transition: background-color, color;
@@ -736,6 +750,43 @@ iframe {
   transition-duration: 0.8s, 0.5s;
   color: black;
   background: rgb(255, 255, 255);
+}
+
+.rwInquiry {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 20px, rgba(0, 0, 0, 0.15) 0px 10px 130px;
+  background: #fff;
+  color: rgb(10, 17, 30);
+  width: 30%;
+  padding: 15px;
+}
+.rwInquiry_text {
+  font-weight: bold;
+}
+.rwInquiry_big {
+  font-size: 16px;
+}
+.rwInquiry_small {
+  font-size: 13px;
+  color: rgb(98, 98, 98);
+}
+.rwInquiry_btn {
+  background: rgb(200, 105, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 40px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -77,3 +77,41 @@
   }
 
 
+// 콘텐츠 제작 문의하기
+.rwInquiry{
+  @include flexbox($jc:space-between);
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 20px, rgba(0, 0, 0, 0.15) 0px 10px 130px;
+  background: #fff;
+  color: $footer-color;
+  width: 30%;
+  padding: 15px;
+
+  &_text{
+    font-weight: bold;
+  }
+
+  &_big{
+    font-size: 16px;
+  }
+
+  &_small{
+    font-size: 13px;
+    color: $section-light;
+  }
+
+  &_btn{
+    background: $primary-color;
+    color: $bg-color1;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
