@@ -4,7 +4,7 @@
 <br>
 
 ## 💿 완성작 미리보기
-<img src="./images/애니메이션미니프로젝트.gif" alt="완성작 미리보기">
+![4_Sass를 활용한 미니 프로젝트](https://github.com/KIMGEUNDU/Realworld_Webpage/assets/126174401/ce753820-0602-4e35-9dca-c2564be46ce4)
 
 <br>
 
